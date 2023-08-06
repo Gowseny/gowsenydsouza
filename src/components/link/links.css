@@ -1,0 +1,26 @@
+.imageLinks {
+  border: 2px rgb(241, 236, 245) solid;
+  border-radius: 50%;
+  height: 16%;
+  width: 10%;
+  margin: 15px 15px 15px 15px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+#imageLinks {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+
+#App {
+  color: aliceblue;
+}
+
+
+#projectImage{
+  background-color: rgba(2, 2, 22, 0.966);
+}

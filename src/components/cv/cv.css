@@ -1,0 +1,66 @@
+.body{
+    overflow: none;
+}
+
+.CV{ 
+       height: 100%;
+    width: 100%;
+    color: white;
+    padding: 5% 10% 0 10%;
+    background-color: #610dba6e;
+    font-family: serif;
+    overflow-y: scroll;
+    /* margin-top: -10vh; */
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    font-size: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #060606;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #6d0add;
+}
+
+#cvTitle{
+        font-size: 3rem;
+            font-family: fantasy;
+            font-style: italic;
+            font-weight: bold;
+}
+
+#returnHome{
+ 
+    height: 5vh;
+    margin-left: -11vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 5vh;
+
+}
