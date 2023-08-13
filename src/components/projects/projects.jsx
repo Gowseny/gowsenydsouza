@@ -68,12 +68,12 @@ const MyProjects =() => {
               src={require("../../images/search.png")}
             />
 
-            <img
+            {/* <img
               className="imageLinks"
               alt="Home"
               onClick={RedirectToForum}
               src={require("../../images/forum.png")}
-            />
+            /> */}
           </div>
         </div>
       </>

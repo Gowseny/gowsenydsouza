@@ -77,7 +77,7 @@ export default function CV() {
             },
             {
               institution: "01founders",
-              duration: "",
+              duration: "2021 October - Current",
               qualification:
                 "Completed Web application projects using GO, JavaScript, HTML, and CSS",
             },
@@ -134,7 +134,7 @@ export default function CV() {
           className="imageLinks"
           src={require("../../images/home.png")}
           alt="Home"
-          onClick={() => navigate(-1)}
+          onClick={ToHome}
         />
       </div>
       <div className="CV">
