@@ -23,7 +23,7 @@ body {
   /* Styles for desktop screens */
   body {
     width: 500px;
-    margin: 0 auto;
+    margin: auto;
   }
 }
 

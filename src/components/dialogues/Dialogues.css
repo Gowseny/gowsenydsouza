@@ -41,3 +41,8 @@
     font-style: oblique;
     font-size: 3rem;
 }
+
+.body{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}

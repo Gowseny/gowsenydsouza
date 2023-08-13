@@ -5,28 +5,52 @@ import Links from "../link/link.jsx";
 import "../../App.css";
 
 const Home = () => {
-  const dialogues = [
-    "Welcome To My Profile",
-    "My Name is Gowseny D'Souza",
-    "I would like to take you on a small journey!",
-    "Do you want to get to know me?",
-    "I am outgoing and patient.",
-    "My key skills are:",
-    "My smile",
-    "Attention to Detail",
-    "Problem Solving",
-    "Hunger for Future inventions",
-    "What I want to do with my future?",
-    "I want to work in a company that takes AI to new levels.",
-    "I want to be part of the Bigger Picture.",
-    "",
-  ];
-
-  const [currentDialogueIndex, setCurrentDialogueIndex] = useState(0);
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const [dialoguesFinished, setDialoguesFinished] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
+  const [currentDialogueIndex, setCurrentDialogueIndex] = useState(0);
 
-  const location = useLocation();
+  useEffect(() => {
+    const loadBackground = async () => {
+      try {
+        await new Promise((resolve, reject) => {
+          const backgroundImg = new Image();
+          backgroundImg.src = require("../../images/background.jpg").default;
+
+          backgroundImg.onload = () => {
+            setBackgroundLoaded(true);
+            resolve();
+          };
+
+          backgroundImg.onerror = () => {
+            setBackgroundLoaded(false);
+            reject();
+          };
+        });
+      } catch (error) {
+        console.error("Error loading background image:", error);
+      }
+    };
+
+    loadBackground();
+  }, []);
+
+    const dialogues = [
+      "Welcome To My Profile",
+      "My Name is Gowseny D'Souza",
+      "I would like to take you on a small journey!",
+      "Do you want to get to know me?",
+      "I am outgoing and patient.",
+      "My key skills are:",
+      "My smile",
+      "Attention to Detail",
+      "Problem Solving",
+      "Hunger for Future inventions",
+      "What I want to do with my future?",
+      "I want to work in a company that takes AI to new levels.",
+      "I want to be part of the Bigger Picture.",
+      "",
+    ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -35,10 +59,12 @@ const Home = () => {
       } else {
         setDialoguesFinished(true);
       }
-    }, 1000); // Delay in milliseconds between each dialogue
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [currentDialogueIndex, dialogues.length]);
+
+  const location = useLocation();
 
   useEffect(() => {
     if (dialoguesFinished || location.pathname !== "/") {
@@ -47,25 +73,23 @@ const Home = () => {
   }, [dialoguesFinished, location.pathname]);
 
   return (
-    <>
-      <div className="App">
-        {!showLinks &&
-          dialogues.map((dialogue, index) =>
-            index === dialogues.length - 1 ? null : (
-              <Dialogue
-                key={index}
-                text={dialogue}
-                isVisible={index === currentDialogueIndex}
-              />
-            )
-          )}
-        {showLinks && (
-          <div id="pageLinks">
-            <Links />
-          </div>
+    <div className="App">
+      {!showLinks &&
+        dialogues.map((dialogue, index) =>
+          index === dialogues.length - 1 ? null : (
+            <Dialogue
+              key={index}
+              text={dialogue}
+              isVisible={index === currentDialogueIndex}
+            />
+          )
         )}
-      </div>
-    </>
+      {showLinks && (
+        <div id="pageLinks">
+          <Links />
+        </div>
+      )}
+    </div>
   );
 };
 

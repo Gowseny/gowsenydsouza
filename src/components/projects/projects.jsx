@@ -29,47 +29,47 @@ const MyProjects =() => {
 
     return (
       <>
-        <div id="App" className="Projects">
-          <div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-          </div>
-          <div id="MyName">Gowseny D'Souza</div>
+        <div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
 
-          <div id="projectLinks">
+        <div id="App">
+          <div id="MyName">Gowseny D'Souza</div>
+          <div id="imageLinks">
             <img
-              className="projectLinks"
+              className="imageLinks"
               alt="Home"
               onClick={ToHome}
               src={require("../../images/home.png")}
             />
 
             <img
-              className="projectLinks"
+              className="imageLinks"
               onClick={RedirectToPacMan}
               src={require("../../images/pacMan.png")}
             ></img>
 
             <img
-              className="projectLinks"
+              className="imageLinks"
               alt="Home"
               onClick={RedirectToSortable}
               src={require("../../images/search.png")}
             />
 
             <img
-              className="projectLinks"
+              className="imageLinks"
               alt="Home"
               onClick={RedirectToForum}
               src={require("../../images/forum.png")}

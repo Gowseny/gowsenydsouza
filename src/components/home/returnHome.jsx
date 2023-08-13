@@ -3,7 +3,23 @@ import Links from "../link/link.jsx";
 const ReturnHome = () => {
     return (
       <>
-        <div id="pageLinks" className="App">
+        <div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
+
+        <div id="pageLinks">
           <Links />
         </div>
       </>

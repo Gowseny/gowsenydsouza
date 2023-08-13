@@ -1,12 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/home/home.jsx";
 import CV from "./components/cv/cv.jsx";
 import MyProjects from "./components/projects/projects.jsx";
 import "./App.css";
-import ReturnHome from './components/home/returnHome.jsx'
+import ReturnHome from "./components/home/returnHome.jsx";
 
 const App = () => {
+  
   return (
     <Router>
       <Routes>
