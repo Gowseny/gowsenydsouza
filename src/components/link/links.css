@@ -18,8 +18,6 @@
 
 #App {
     top: 40vh;
-    border: groove 7px #3702708f;
-    box-shadow: 1px 0px 21px 9px rgb(117, 68, 166);
     display: flex;
     flex-direction: column;
     align-items: center;

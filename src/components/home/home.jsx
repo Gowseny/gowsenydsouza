@@ -62,7 +62,7 @@ const Navigate= useNavigate();
         setDialoguesFinished(true);
         Navigate('/home');
       }
-    }, 1000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [currentDialogueIndex, dialogues.length]);
