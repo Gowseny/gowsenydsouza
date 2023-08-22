@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "./cv.css";
-import { useNavigate } from "react-router-dom";
 import ToHome from "../home/navigateHome";
 
 export default function CV() {
   const [visibleSectionIndex, setVisibleSectionIndex] = useState(0);
-  const navigate = useNavigate();
 
       const cvSections = [
         {
           section: "Personal profile",
-          content: `I am a determined and highly motivated individual with strong problem-solving skills, effective communication, and a passion for software engineering. As an outgoing team player, I strive for excellence and consistently deliver high-quality work.`,
+          content: `I am a determined and highly motivated individual with
+          strong problem-solving skills, effective communication, and a passion
+          for software engineering. As an outgoing team player, I strive for excellence and
+          consistently deliver high-quality work.`,
         },
 
         {
           section: "Key Skills",
           content: `Proficient in GO, Rust, JavaScript, React.js, HTML, CSS, and SQL.
-      Excellent time management and punctuality.
-      Strong ability to understand and execute tasks with minimal supervision.
-      Quick learner with a strong work ethic.
-      Effective team player with excellent oral and written communication skills.`,
+          Excellent time management and punctuality.
+          Strong ability to understand and execute tasks with minimal supervision.
+          Quick learner with a strong work ethic.
+          Effective team player with excellent oral and written communication skills.`,
         },
         {
           section: "Work & Experience",
@@ -87,7 +88,6 @@ export default function CV() {
 
 
   useEffect(() => {
-  
     const delay = 2000; // Delay between each section appearing (in milliseconds)
 
     const timer = setInterval(() => {
@@ -138,7 +138,7 @@ export default function CV() {
         />
       </div>
       <div className="CV">
-        <div id="cvTitle">Curriculum vitae</div>
+        <div id="cvTitle">Curriculum Vitae</div>
         {cvSections.map((section, index) => (
           <Section
             key={index}

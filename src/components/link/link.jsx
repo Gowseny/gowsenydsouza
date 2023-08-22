@@ -22,45 +22,45 @@ const Links = () => {
 
   return (
     <>
-    <div id="App">
-      <div id="MyName">Gowseny D'Souza</div>
-      <div id="imageLinks">
-        <img
-          className="imageLinks"
-          onClick={RedirectToGithub}
-          src={require("../../images/github.png")}
-        />
+     <div id="App">
+        <div id="MyName">Gowseny D'Souza</div>
+        <div id="imageLinks">
+          <img
+            className="imageLinks"
+            onClick={RedirectToGithub}
+            src={require("../../images/github.png")}
+          />
 
-        {/* Image link to LinkedIn Profile */}
-        <img
-          className="imageLinks"
-          onClick={RedirectToLinkedIn}
-          src={require("../../images/linkedin.jpg")}
-        />
-        {/* End of ImageLink for linkedIn */}
+          {/* Image link to LinkedIn Profile */}
+          <img
+            className="imageLinks"
+            onClick={RedirectToLinkedIn}
+            src={require("../../images/linkedin.jpg")}
+          />
+          {/* End of ImageLink for linkedIn */}
 
-        {/* Image Link to open another page with my projects */}
-        <img
-          href="/myProjects"
-          className="imageLinks"
-          id="projectImage"
-          onClick={toMyProjects}
-          src={require("../../images/idea.png")}
-        />
+          {/* Image Link to open another page with my projects */}
+          <img
+            href="/myProjects"
+            className="imageLinks"
+            id="projectImage"
+            onClick={toMyProjects}
+            src={require("../../images/idea.png")}
+          />
 
-        <img
-          href="/myCv"
-          className="imageLinks"
-          onClick={toMyCV}
-          src={require("../../images/cv.png")}
-        />
-
+          <img
+            href="/myCv"
+            className="imageLinks"
+            onClick={toMyCV}
+            src={require("../../images/cv.png")}
+          />
         </div>
 
         {/* End of Project */}
         {/*  */}
         {/* https://sortable-raid-gowsenys.netlify.app/ */}
       </div>
+
     </>
   );
 };

@@ -4,6 +4,7 @@ import "./Dialogues.css";
 
 const Dialogue = ({ text, isVisible }) => {
   return (
+    
     <div className={`dialogue ${isVisible ? "visible" : "hidden"}`}>{text}</div>
   );
 };

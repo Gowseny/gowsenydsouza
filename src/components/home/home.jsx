@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Dialogue from "../dialogues/dialogue.jsx";
-import Links from "../link/link.jsx";
 import "../../App.css";
+import './home.css';
 
 const Home = () => {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const [dialoguesFinished, setDialoguesFinished] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
   const [currentDialogueIndex, setCurrentDialogueIndex] = useState(0);
+
+const Navigate= useNavigate();
 
   useEffect(() => {
     const loadBackground = async () => {
@@ -58,6 +60,7 @@ const Home = () => {
         setCurrentDialogueIndex((prevIndex) => prevIndex + 1);
       } else {
         setDialoguesFinished(true);
+        Navigate('/home');
       }
     }, 1000);
 
@@ -66,31 +69,28 @@ const Home = () => {
 
   const location = useLocation();
 
-  useEffect(() => {
-    if (dialoguesFinished || location.pathname !== "/") {
-      setShowLinks(true);
-    }
-  }, [dialoguesFinished, location.pathname]);
+useEffect(() => {
+  if (dialoguesFinished || location.pathname !== "/") {
+    setShowLinks(true);
 
-  return (
-    <div className="App">
-      {!showLinks &&
-        dialogues.map((dialogue, index) =>
-          index === dialogues.length - 1 ? null : (
-            <Dialogue
-              key={index}
-              text={dialogue}
-              isVisible={index === currentDialogueIndex}
-            />
-          )
-        )}
-      {showLinks && (
-        <div id="pageLinks">
-          <Links />
-        </div>
-      )}
+  }
+}, [dialoguesFinished, location.pathname]);
+
+
+return (
+  <div className="App">
+    <div className="dialogue-container">
+      {dialogues.map((dialogue, index) => (
+        <Dialogue
+          key={index}
+          text={dialogue}
+          isVisible={index === currentDialogueIndex}
+        />
+      ))}
     </div>
-  );
+ 
+  </div>
+ );
 };
 
 export default Home;

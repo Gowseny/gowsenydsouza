@@ -7,7 +7,7 @@ import '../../App.css'
 import '../link/links.css'
 const RedirectToPacMan = () => {
   if (typeof window !== "undefined") {
-    window.open("https://gowsenys-my-pacman.netlify.app", "_blank");
+    window.open("https://gowsenys-pacman.netlify.app", "_blank");
   }
 };
 
@@ -29,23 +29,9 @@ const MyProjects =() => {
 
     return (
       <>
-        <div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-        </div>
 
-        <div id="App">
+        <div id="pageLinks">
+          <div id="App">
           <div id="MyName">Gowseny D'Souza</div>
           <div id="imageLinks">
             <img
@@ -75,6 +61,7 @@ const MyProjects =() => {
               src={require("../../images/forum.png")}
             /> */}
           </div>
+        </div>
         </div>
       </>
     );
